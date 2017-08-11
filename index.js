@@ -52,7 +52,7 @@ function upload_image(src_path, target_bucket, target_path, do_after) {
   file_ending = file_ending.toLowerCase()
   let mime_type = file_to_mime[file_ending]
   console.log(`uploading ${JSON.stringify({target_bucket, target_path, mime_type})}`)
-  S3.putObject({Bucket: target_bucket, Key: target_path, Body: instr, ContentType: mime_type}, do_after)
+  S3.putObject({Bucket: target_bucket, Key: target_path, Body: instr, ContentType: mime_type, ACL: 'public-read'}, do_after)
 }
 
 exports.handler = function(event, context) {
