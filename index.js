@@ -34,7 +34,7 @@ function add_watermark(src_path, do_after) {
     let [unused, path_base, file_ending] = matches
     let target_path = `${path_base}_wm.${file_ending}`
     console.log(`Adding watermark on: ${JSON.stringify({src_path, target_path, watermark_path})}`)
-    gm(src_path).composite(watermark_path).gravity('SouthEast').write(target_path, (err)=>{
+    gm(src_path).autoOrient().composite(watermark_path).gravity('SouthEast').write(target_path, (err)=>{
       if (err) {
         console.log(`Error on applying watermark: file: ${src_path}, error: "${err}"`)
         do_after(err)
