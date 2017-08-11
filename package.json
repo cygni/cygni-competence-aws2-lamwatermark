@@ -1,0 +1,16 @@
+{
+  "name": "lam-watermark",
+  "version": "1.0.0",
+  "description": "adds watermark on s3 images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Buren <robert.buren@cygni.se>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "aws-sdk": "^2.90.0",
+    "gm": "^1.23.0"
+  }
+}
