@@ -1,4 +1,4 @@
-const gm = require('gm').subClass({imageMagick: true})
+const gm = require('gm') //.subClass({imageMagick: true})
 const AWS = require('aws-sdk')
 const S3 = new AWS.S3({region: 'eu-central-1'})
 const fs = require('fs')
@@ -35,7 +35,7 @@ function add_watermark(src_path, do_after) {
     let target_path = `${path_base}_wm.${file_ending}`
     console.log(`Adding watermark on: ${JSON.stringify({src_path, target_path, watermark_path})}`)
     // want to use autoOrient() here, but it produces error. Maybe in next version...
-    gm(src_path)./*autoOrient().*/composite(watermark_path).gravity('SouthEast').write(target_path, (err)=>{
+    gm(src_path).autoOrient().composite(watermark_path).gravity('SouthEast').write(target_path, (err)=>{
       if (err) {
         console.log(`Error on applying watermark: file: ${src_path}, error: "${err}"`)
         do_after(err)
