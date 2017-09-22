@@ -24,7 +24,7 @@ function fetch_image(srcBucket, srcPath, do_after) {
 }
 
 function add_watermark(src_path, do_after) {
-  const watermark_path = './cts-outline.png'
+  const watermark_path = './robert.png'
   let matches = src_path.match(acceptable_file)
   if (!matches) {
     let err = `File ${src_path} is not a supported file format`
