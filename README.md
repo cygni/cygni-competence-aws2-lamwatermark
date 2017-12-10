@@ -1,4 +1,4 @@
-# Cygni Tech Summit 2017 AWS demo
+# Cygni AWS Kompetensutveckling 2017
 
 ## Pre-setup
 
