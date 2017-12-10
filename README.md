@@ -1,5 +1,11 @@
 # Cygni AWS Kompetensutveckling 2017
 
+## Notes
+
+The name of the watermark image is hardcoded in the add_watermark() function.
+You can add another image file into the project and change the code to reflect
+that, if you want.
+
 ## Pre-setup
 
 1. Log in to AWS console, on the eu-central-1 region
