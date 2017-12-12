@@ -9,7 +9,7 @@ that, if you want.
 ## Pre-setup
 
 1. Log in to AWS console, on the eu-central-1 region
-1. Setup IAM role 'lambda-with-s3' with AmazonS3FullAccess and CloudWatchLogsFullAccess
+1. Setup IAM role 'lambda-with-s3' with AmazonS3FullAccess and CloudWatchLogsFullAccess (eller bara AWSLambdaFullAccess)
 1. Setup empty S3 bucket. Note the name.
 
 ## Installation / Launch
